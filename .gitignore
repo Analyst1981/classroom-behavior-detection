@@ -1,0 +1,44 @@
+# ============ 依赖与构建产物 ============
+node_modules/
+frontend/node_modules/
+frontend/.npm-cache/
+frontend/dist/
+backend/target/
+**/__pycache__/
+*.py[cod]
+
+# ============ 运行产物（检测结果 / 上传 / 日志 / 数据库文件）============
+ai-service/outputs/
+ai-service/uploads/
+logs/
+backend/data/
+backend/storage/
+*.log
+
+# ============ 模型权重（体积大，且需自行训练或下载）============
+*.pt
+*.pth
+*.onnx
+*.engine
+ai-service/models/*.pt
+!ai-service/models/README.md
+
+# ============ 训练产物与数据集 ============
+ai-service/runs/
+ai-service/datasets/
+*.cache
+
+# ============ 本地环境变量（含 API Key，禁止提交）============
+.env
+.env.*
+!.env.example
+ai-service/.env
+frontend/.env
+backend/src/main/resources/application-local.yml
+
+# ============ 系统与编辑器 ============
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

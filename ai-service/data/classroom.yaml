@@ -1,0 +1,18 @@
+# 课堂行为检测数据集配置（YOLO 格式）
+# 目录结构：
+#   datasets/classroom/
+#     images/train  images/val
+#     labels/train  labels/val
+path: ../datasets/classroom
+train: images/train
+val: images/val
+test:
+
+# 类别顺序必须与 config.CLASS_NAMES 一致；修改类别后需重新训练权重
+names:
+  0: 低头写字
+  1: 低头看书
+  2: 抬头听课
+  3: 转头
+  4: 举手
+  5: 站立
